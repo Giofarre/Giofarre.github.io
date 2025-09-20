@@ -1,8 +1,129 @@
-<!DOCTYPE html>
-<html>
-    <body>
-        <h1>
-            Hello i am Farrel. this is my website
-        </h1>
-    </body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Profile</title>
+  <style>
+    :root{--accent:#4f46e5;--muted:#6b7280;--card:#ffffff}
+    html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial}
+    body{background:#f3f4f6;color:#111827;display:flex;align-items:center;justify-content:center;padding:32px}
+    .container{width:100%;max-width:980px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.95));border-radius:16px;box-shadow:0 8px 30px rgba(2,6,23,0.08);overflow:hidden}
+    .hero{height:240px;background-image:url('https://source.unsplash.com/1600x900/?landscape,city');background-size:cover;background-position:center}
+    .profile-row{display:flex;padding:20px;gap:20px;align-items:center}
+    .avatar{width:120px;height:120px;border-radius:9999px;overflow:hidden;flex:0 0 120px;border:6px solid white;margin-top:-60px;box-shadow:0 6px 20px rgba(2,6,23,0.12)}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .info{flex:1}
+    .name{font-size:20px;font-weight:700;margin:0}
+    .title{color:var(--muted);margin:6px 0 12px}
+    .bio{color:#374151;margin:0 0 12px;line-height:1.45}
+    .badges{display:flex;gap:8px;flex-wrap:wrap}
+    .badge{background:#eef2ff;color:var(--accent);padding:6px 10px;border-radius:999px;font-weight:600;font-size:13px}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px;padding:20px}
+    .card-inner{background:transparent}
+    .section{background:var(--card);border-radius:12px;padding:16px;box-shadow:0 2px 8px rgba(15,23,42,0.03)}
+    .skills{display:flex;gap:8px;flex-wrap:wrap}
+    .skill{background:#f3f4f6;padding:8px 10px;border-radius:8px;font-weight:600;color:#374151}
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .project{border-radius:10px;overflow:hidden}
+    .project img{width:100%;height:140px;object-fit:cover;display:block}
+    .contact{display:flex;flex-direction:column;gap:8px}
+    .btn{display:inline-block;background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr}
+      .avatar{width:96px;height:96px;flex:0 0 96px;margin-top:-48px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="hero" aria-hidden="true"></div>
+
+      <div class="profile-row">
+        <div class="avatar" title="Profile photo">
+          <!-- Replace this with any free profile image (Unsplash/Pexels) -->
+          <img src="https://source.unsplash.com/200x200/?portrait,face" alt="Avatar">
+        </div>
+
+        <div class="info">
+          <h1 class="name">Your Name</h1>
+          <div class="title">Product Designer • Front-end Dev • Photographer</div>
+          <p class="bio">Hi — I'm <strong>Your Name</strong>, a designer and developer who builds delightful experiences on the web. I love clean UI, nice micro-interactions and learning new design systems.</p>
+
+          <div class="badges">
+            <span class="badge">Open to work</span>
+            <span class="badge">Remote</span>
+            <span class="badge">Available for freelance</span>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:8px;justify-self:end;align-items:flex-end">
+          <a class="btn" href="#contact">Contact</a>
+          <a class="btn" href="#projects" style="background:#10b981">Portfolio</a>
+        </div>
+      </div>
+
+      <div class="grid">
+        <main>
+          <div class="section card-inner">
+            <h2 style="margin-top:0">About</h2>
+            <p class="bio">Write 2–3 short sentences about yourself. What you make, tools you use, and what you're looking for.</p>
+            <h3>Skills</h3>
+            <div class="skills">
+              <span class="skill">HTML</span>
+              <span class="skill">CSS</span>
+              <span class="skill">JavaScript</span>
+              <span class="skill">Figma</span>
+              <span class="skill">React</span>
+            </div>
+          </div>
+
+          <div class="section" id="projects" style="margin-top:16px">
+            <h2 style="margin-top:0">Selected projects</h2>
+            <div class="projects">
+              <div class="project">
+                <img src="https://source.unsplash.com/800x600/?website,design" alt="Project 1">
+              </div>
+              <div class="project">
+                <img src="https://source.unsplash.com/800x600/?app,design" alt="Project 2">
+              </div>
+              <div class="project">
+                <img src="https://source.unsplash.com/800x600/?code,developer" alt="Project 3">
+              </div>
+              <div class="project">
+                <img src="https://source.unsplash.com/800x600/?photography,portrait" alt="Project 4">
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <aside>
+          <div class="section">
+            <h3 style="margin-top:0">Contact</h3>
+            <div class="contact" id="contact">
+              <div><strong>Email</strong><br><a href="mailto:you@example.com">you@example.com</a></div>
+              <div><strong>Location</strong><br>City, Country</div>
+              <div style="margin-top:8px">
+                <a class="btn" href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="section" style="margin-top:16px">
+            <h3 style="margin-top:0">Resume</h3>
+            <p style="margin:0 0 12px">Download or link to your resume/CV.</p>
+            <a class="btn" href="#">Download PDF</a>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+
+    <p style="text-align:center;font-size:12px;color:var(--muted);margin-top:12px">Images shown are from Unsplash (free). Replace the <code>src</code> attributes with your chosen images.</p>
+  </div>
+</body>
 </html>
